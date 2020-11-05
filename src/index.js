@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dogSex = document.getElementById("dog-sex");
   const dogBreed = document.getElementById("dog-breed");
   const dogForm = document.getElementById("dog-form");
-  const URL = `http:localhost:3000/dogs`;
+  const URL = `http://localhost:3000/dogs`;
   var GLOBALID;
 
   (() => {
@@ -84,12 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
         sex: dogSex.value,
       }),
     };
-    console.log(`${URL}/${GLOBALID()}`);
 
-    let dogres = await fetch(`${URL}/${GLOBALID()}`, configObj);
-    let dog = await dogres.json();
-    const dog_table = document.querySelector(`#A${dog.id}`);
-    const [name, breed, sex] = dog_table.querySelectorAll("td");
+    let dogRes = await fetch(`${URL}/${GLOBALID()}`, configObj);
+    let dog = await dogRes.json();
+    const [name, breed, sex] = document.querySelector(`#A${dog.id}`).querySelectorAll("td");
     console.log(name);
     name.innerText = dog.name;
     breed.innerText = dog.breed;
