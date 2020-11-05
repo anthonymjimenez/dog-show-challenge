@@ -1,0 +1,20 @@
+{
+  "name": "dog-show-challenge",
+  "version": "1.0.0",
+  "description": "You are responsible for managing the website for the Westminster Kennel Club Dog Show. These dog owners are _very_ competitive. We need to make sure that they can view all the competition (the other dogs) and edit their dog's information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonymjimenez/dog-show-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonymjimenez/dog-show-challenge/issues"
+  },
+  "homepage": "https://github.com/anthonymjimenez/dog-show-challenge#readme"
+}
