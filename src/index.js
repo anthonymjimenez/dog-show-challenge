@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let dogRes = await fetch(`${URL}/${GLOBALID()}`, configObj);
     let dog = await dogRes.json();
     const [name, breed, sex] = document.querySelector(`#A${dog.id}`).querySelectorAll("td");
-    console.log(name);
     name.innerText = dog.name;
     breed.innerText = dog.breed;
     sex.innerText = dog.sex;
@@ -98,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function addEventToForm() {
     dogForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      console.log("FUCK Ou");
       patchDog();
     });
   }
